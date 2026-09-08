@@ -1,0 +1,151 @@
+<mxfile host="app.diagrams.net" agent="Cursor">
+  <diagram name="Continuous threat modelling - abstract" id="ctm-v4">
+    <mxGraphModel dx="3302" dy="1032" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1820" pageHeight="1300" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="RB" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fbfbfb;strokeColor=#b3b3b3;dashed=1;verticalAlign=top;align=left;spacingLeft=16;spacingTop=6;fontSize=14;fontStyle=1;fontColor=#666666;" value="Continuous Threat Modelling" vertex="1">
+          <mxGeometry height="250" width="1260" x="210" y="250" as="geometry" />
+        </mxCell>
+        <mxCell id="RE" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fbfbfb;strokeColor=#b3b3b3;dashed=1;verticalAlign=top;align=left;spacingLeft=16;spacingTop=6;fontSize=14;fontStyle=1;fontColor=#666666;" value="System of Record" vertex="1">
+          <mxGeometry height="190" width="790" x="470" y="600" as="geometry" />
+        </mxCell>
+        <mxCell id="A1" parent="1" style="html=1;verticalLabelPosition=bottom;align=center;labelBackgroundColor=none;verticalAlign=top;strokeWidth=2;strokeColor=#6c8ebf;shadow=0;dashed=0;shape=mxgraph.ios7.icons.user;fontSize=12;" value="Development Team" vertex="1">
+          <mxGeometry height="60" width="60" x="70" y="95" as="geometry" />
+        </mxCell>
+        <mxCell id="A2" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=12;" value="&lt;b&gt;Change Event&lt;/b&gt;&lt;br&gt;design, code or infrastructure change" vertex="1">
+          <mxGeometry height="80" width="200" x="210" y="85" as="geometry" />
+        </mxCell>
+        <mxCell id="A3" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="&lt;b&gt;Delivery Pipeline&lt;/b&gt;&lt;br&gt;advisory by default; gates only on confirmed critical risk" vertex="1">
+          <mxGeometry height="80" width="200" x="470" y="85" as="geometry" />
+        </mxCell>
+        <mxCell id="A4" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=12;" value="&lt;b&gt;Release&lt;/b&gt;" vertex="1">
+          <mxGeometry height="80" width="170" x="730" y="85" as="geometry" />
+        </mxCell>
+        <mxCell id="B1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#666666;fontSize=11;" value="&lt;b&gt;Discover&lt;/b&gt;&lt;br&gt;derive the current architecture and data-flow model from authoritative sources" vertex="1">
+          <mxGeometry height="140" width="205" x="240" y="310" as="geometry" />
+        </mxCell>
+        <mxCell id="B2" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#666666;fontSize=11;" value="&lt;b&gt;Compare&lt;/b&gt;&lt;br&gt;determine what changed — architectural drift against the approved baseline" vertex="1">
+          <mxGeometry height="140" width="205" x="475" y="310" as="geometry" />
+        </mxCell>
+        <mxCell id="B3" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#666666;fontSize=10;" value="&lt;b&gt;Validate&lt;/b&gt;&lt;br&gt;test the &lt;b&gt;existing&lt;/b&gt; model against the change&lt;br&gt;&lt;br&gt;are recorded threats still mitigated? are controls still present and effective? do documented assumptions still hold?" vertex="1">
+          <mxGeometry height="140" width="225" x="710" y="310" as="geometry" />
+        </mxCell>
+        <mxCell id="B4" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#666666;fontSize=10;" value="&lt;b&gt;Identify&lt;/b&gt;&lt;br&gt;determine what the change &lt;b&gt;introduces&lt;/b&gt;&lt;br&gt;&lt;br&gt;new threats, newly required controls, new assumptions" vertex="1">
+          <mxGeometry height="140" width="225" x="965" y="310" as="geometry" />
+        </mxCell>
+        <mxCell id="B5" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#666666;fontSize=10;" value="&lt;b&gt;Reconcile&lt;/b&gt;&lt;br&gt;classify every threat, control and assumption against the record&lt;br&gt;&lt;br&gt;&lt;b&gt;confirmed · regressed · new · obsolete&lt;/b&gt;" vertex="1">
+          <mxGeometry height="140" width="225" x="1220" y="310" as="geometry" />
+        </mxCell>
+        <mxCell id="E1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=11;" value="&lt;b&gt;Threat Model of Record&lt;/b&gt;&lt;br&gt;approved architecture and trust boundaries, plus the recorded threats, controls and security assumptions — versioned and attributable" vertex="1">
+          <mxGeometry height="110" width="410" x="500" y="640" as="geometry" />
+        </mxCell>
+        <mxCell id="E2" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=11;" value="&lt;b&gt;Security Knowledge Base&lt;/b&gt;&lt;br&gt;reusable threat and control patterns, prior findings and standards" vertex="1">
+          <mxGeometry height="110" width="280" x="960" y="640" as="geometry" />
+        </mxCell>
+        <mxCell id="C1" parent="1" style="html=1;verticalLabelPosition=bottom;align=center;labelBackgroundColor=none;verticalAlign=top;strokeWidth=2;strokeColor=#d79b00;shadow=0;dashed=0;shape=mxgraph.ios7.icons.user;fontSize=12;" value="Security Team" vertex="1">
+          <mxGeometry height="60" width="60" x="520" y="875" as="geometry" />
+        </mxCell>
+        <mxCell id="7N3juBUfGKOFW85QX7Vu-2" edge="1" parent="1" source="C2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.684;exitY=1.007;exitDx=0;exitDy=0;exitPerimeter=0;" target="D3" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="C2" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=12;" value="&lt;b&gt;Security Review and Approval&lt;/b&gt;&lt;br&gt;human decision on every escalated finding" vertex="1">
+          <mxGeometry height="100" width="300" x="700" y="855" as="geometry" />
+        </mxCell>
+        <mxCell id="D1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="&lt;b&gt;Remediation Feedback&lt;/b&gt;&lt;br&gt;returned to the change author inside the delivery workflow" vertex="1">
+          <mxGeometry height="150" width="250" x="70" y="810" as="geometry" />
+        </mxCell>
+        <mxCell id="D3" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=11;" value="&lt;b&gt;Baseline Update&lt;/b&gt;&lt;br&gt;approved change to the threat model of record" vertex="1">
+          <mxGeometry height="105" width="250" x="780" y="1040" as="geometry" />
+        </mxCell>
+        <mxCell id="eA1A2" edge="1" parent="1" source="A1" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;strokeColor=#333333;" target="A2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="eA2A3" edge="1" parent="1" source="A2" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;strokeColor=#333333;" target="A3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="eA3A4" edge="1" parent="1" source="A3" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;strokeColor=#333333;" target="A4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="eA2B1" edge="1" parent="1" source="A2" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;strokeColor=#6c8ebf;fontSize=11;labelBackgroundColor=#ffffff;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.34;entryY=0;entryDx=0;entryDy=0;" target="B1" value="triggers analysis">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="eB1B2" edge="1" parent="1" source="B1" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;strokeColor=#333333;" target="B2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="eB2B3" edge="1" parent="1" source="B2" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;strokeColor=#333333;" target="B3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="eB3B4" edge="1" parent="1" source="B3" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;strokeColor=#333333;" target="B4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="eB4B5" edge="1" parent="1" source="B4" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;strokeColor=#333333;" target="B5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="eE1B2" edge="1" parent="1" source="E1" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;strokeColor=#82b366;fontSize=11;labelBackgroundColor=#ffffff;exitX=0.188;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" target="B2" value="approved architecture baseline">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="eE1B3" edge="1" parent="1" source="E1" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=3;strokeColor=#82b366;fontSize=11;fontColor=#4f7942;labelBackgroundColor=#ffffff;exitX=0.785;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" target="B3" value="&lt;b&gt;recorded threats, controls&lt;br&gt;and security assumptions&lt;/b&gt;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="eE2B4" edge="1" parent="1" source="E2" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;strokeColor=#82b366;fontSize=11;labelBackgroundColor=#ffffff;exitX=0.418;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" target="B4" value="patterns and precedent">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="eB6C2" edge="1" parent="1" source="B5" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;strokeColor=#333333;fontSize=11;labelBackgroundColor=#ffffff;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="C2" value="escalated findings">
+          <mxGeometry relative="1" x="0.3356" as="geometry">
+            <mxPoint x="-1" as="offset" />
+            <Array as="points">
+              <mxPoint x="1332.53" y="820.07" />
+              <mxPoint x="850" y="820.07" />
+            </Array>
+            <mxPoint x="1340" y="650" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="eC1C2" edge="1" parent="1" source="C1" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;strokeColor=#333333;startArrow=classic;startFill=1;" target="C2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="eC2D1" edge="1" parent="1" source="C2" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;strokeColor=#333333;exitX=0.1;exitY=1;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" target="D1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="730" y="975" />
+              <mxPoint x="350" y="975" />
+              <mxPoint x="350" y="885" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="eD1A1" edge="1" parent="1" source="D1" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=3;strokeColor=#b85450;fontSize=12;fontColor=#b85450;labelBackgroundColor=#ffffff;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=-0.056;entryY=0.478;entryDx=0;entryDy=0;entryPerimeter=0;" target="A1" value="&lt;b&gt;closes the loop&lt;/b&gt;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="40" y="885" />
+              <mxPoint x="40" y="123.67" />
+            </Array>
+            <mxPoint x="180" y="290" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="eD3E1" edge="1" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;strokeColor=#82b366;fontSize=11;labelBackgroundColor=#ffffff;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.55;entryDx=0;entryDy=0;" value="updates the record">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="777.5" y="1089.6" />
+              <mxPoint x="377.5" y="1089.6" />
+              <mxPoint x="377.5" y="690" />
+            </Array>
+            <mxPoint x="777.5" y="1082.03" as="sourcePoint" />
+            <mxPoint x="497.5" y="690.03" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="L1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="Delivery and developer-facing" vertex="1">
+          <mxGeometry height="40" width="300" x="120" y="1200" as="geometry" />
+        </mxCell>
+        <mxCell id="L2" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#666666;fontSize=11;" value="Automated analysis" vertex="1">
+          <mxGeometry height="40" width="300" x="440" y="1200" as="geometry" />
+        </mxCell>
+        <mxCell id="L3" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=11;" value="Human decision" vertex="1">
+          <mxGeometry height="40" width="300" x="760" y="1200" as="geometry" />
+        </mxCell>
+        <mxCell id="L4" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=11;" value="Approved state and records" vertex="1">
+          <mxGeometry height="40" width="340" x="1080" y="1200" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
