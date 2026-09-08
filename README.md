@@ -88,3 +88,11 @@ git checkout infisical/v0.47.0-postgres   # change-event DFD + drift
 JPGs render in this README. Open the matching `.drawio` files in [diagrams.net](https://app.diagrams.net/) or a draw.io editor extension to edit. Checkout only to read code at a pin.
 
 This run is not a PR bot, a confidence scorer, or an org-wide disposition store. Those belong to a deployment of the same lifecycle. What is in this repo is the seed, one change event, the harness prompts, and a matured assumption set ready for the next event.
+
+## License
+
+Copyright © 2026 Saurabh Sabnis. Contact: [saurabhpsabnis@gmail.com](mailto:saurabhpsabnis@gmail.com).
+
+This case study — the threat models, DFDs, assumptions, diagrams, and prompts — is licensed under [Creative Commons Attribution 4.0 International](LICENSE) (CC BY 4.0). You may share and adapt it, including commercially, as long as you give appropriate credit.
+
+Infisical is a third-party product. This repository is independent analysis of two public Infisical tags. It is not affiliated with, or endorsed by, Infisical.
