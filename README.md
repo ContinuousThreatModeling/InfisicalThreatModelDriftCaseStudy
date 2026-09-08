@@ -86,3 +86,39 @@ git checkout infisical/v0.47.0-postgres   # change-event DFD + drift
 JPGs render in this README. Open the matching `.drawio` files in [diagrams.net](https://app.diagrams.net/) or a draw.io editor extension to edit. Checkout only to read code at a pin.
 
 This run is not a PR bot, a confidence scorer, or an org-wide disposition store. Those belong to a deployment of the same lifecycle. What is in this repo is the seed, one change event, the harness prompts, and a matured assumption set ready for the next event.
+
+## Reading the drift report
+
+[serviceTokenThreatModelDrift-v0.42.0-to-v0.47.0-postgres.md](serviceTokenThreatModelDrift-v0.42.0-to-v0.47.0-postgres.md) is the output of one lifecycle run. Its ten sections are ordered so the record is tested before it is extended, and the later sections are only meaningful because the earlier ones constrained them. Read in order.
+
+| §  | Section           | What it answers                                                                                              |
+| -- | ----------------- | ------------------------------------------------------------------------------------------------------------ |
+| 1  | Scope             | Which pins, which inputs, what was excluded. Closes by stating the report does not replace the record.       |
+| 2  | Discover          | Architecture at the change-event pin, plus tables mapping baseline element IDs to current ones.               |
+| 3  | Compare           | Architectural delta as **unchanged / changed / added / removed** per element class, then material differences. |
+| 4  | Validate          | The existing record, one recorded `T#` / `M#` / `A#` at a time. Nothing here is new.                          |
+| 5  | Identify          | Only what the change introduced: `T14`–`T19`, `M11`–`M15`, `A11`–`A15`.                                       |
+| 6  | Reconcile         | Every ID labeled **confirmed · regressed · new · obsolete**, with a reason and current strength.              |
+| 7  | Traceability      | Surviving `T#` → `M#` → `A#` triples. A threat with no row has no mitigation.                                 |
+| 8  | Residual risk     | What is still open and what would close it.                                                                   |
+| 9  | Escalated findings | The security-team queue for this event.                                                                      |
+| 10 | Input defects     | Faults in the inputs themselves, not in the code.                                                             |
+
+Section 4 is what makes this a lifecycle rather than a re-run. Each threat entry carries *Target then / now*, *Narrative still valid*, *Recorded mitigations*, *Strength then / now*, and `path:line` evidence; mitigations and assumptions end in a *Verdict*. A "no" on *Narrative still valid* is not a pass. `T1` is closed by a new check and `T2` is closed because its surface is gone — only §6 separates those as `confirmed` and `obsolete`. Likewise `A10` "fails" because bcrypt replaced an HMAC verify, which is a mechanism change, not a defect.
+
+### Three vocabularies, read together
+
+**Labels** (§6) are dispositions against the record: `confirmed` survived the test, `regressed` was true and is no longer covered, `new` arrived with the change, `obsolete` lost its surface. **Strength** grades a mitigation against a threat: `full`, `partial`, `conditional` (holds only under a configuration or operator choice), or `—`. **Assumption class** says how a statement behaves: *upheld by code*, *threat-enabling*, or *environmental*.
+
+None of them reads alone. `T17` is `new` with `M14 partial; M8 conditional`, so possession of a durable token is bounded only by a bcrypt check and a nullable `expiresAt` — which is why §8 gives "set `expiresIn`" as what closes it. A `confirmed` threat is not a safe one: `T6` and `T7` are both still live with no mitigation at all.
+
+### Resolving an ID across the repo
+
+- **A recorded `T#` or `M#` in §4** — the original narrative is in [serviceTokenThreatModel-v0.42.0.md](serviceTokenThreatModel-v0.42.0.md) under the same ID and title. §4 gives the verdict, not the original text.
+- **An element ID (`E#`, `P#`, `D#`, `F#`, `B#`)** — resolve it in the DFD *for that pin*: [serviceTokenDfd-v0.42.0.md](serviceTokenDfd-v0.42.0.md) or [serviceTokenDfd-v0.47.0-postgres.md](serviceTokenDfd-v0.47.0-postgres.md). **These do not correspond across pins.** The DFDs were generated independently, so baseline `P3` and current `P3` are unrelated; §2's tables are the mapping, and it is by function. This is the easiest way to misread the report.
+- **An assumption** — the baseline file [securityAssumptions-0.42.0.md](securityAssumptions-0.42.0.md) has unnumbered bullets; the report numbers them `A1`–`A10` in file order, matching by name. Restated and new statements are in [securityAssumptions-v0.47.0-postgres.md](securityAssumptions-v0.47.0-postgres.md), which carries explicit IDs and has no `A2` or `A3` — obsolete assumptions drop out of the current set rather than being deleted from history.
+- **Why a section exists at all** — [threatModelDriftAgentPrompt.md](threatModelDriftAgentPrompt.md) is the contract that produced the shape.
+
+### What carries forward
+
+`T#` / `M#` / `A#` are the stable identifiers across events; element IDs are local to one DFD. After this run, [securityAssumptions-v0.47.0-postgres.md](securityAssumptions-v0.47.0-postgres.md) plus the §6 tables are the seed for the next change event. §9 is the only section that asks a human for a decision.
