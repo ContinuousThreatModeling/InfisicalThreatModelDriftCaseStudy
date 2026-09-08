@@ -91,7 +91,7 @@ This run is not a PR bot, a confidence scorer, or an org-wide disposition store.
 
 ## License
 
-Copyright © 2026 Saurabh Sabnis. Contact: [saurabhpsabnis@gmail.com](mailto:saurabhpsabnis@gmail.com).
+Copyright © 2026 Saurabh Sabnis ([saurabhpsabnis@gmail.com](mailto:saurabhpsabnis@gmail.com)), Anish Menon ([anish.security@gmail.com](mailto:anish.security@gmail.com)), and Shreyas Mohite ([mohiteshreyasv@gmail.com](mailto:mohiteshreyasv@gmail.com)).
 
 This case study — the threat models, DFDs, assumptions, diagrams, and prompts — is licensed under [Creative Commons Attribution 4.0 International](LICENSE) (CC BY 4.0). You may share and adapt it, including commercially, as long as you give appropriate credit.
 
