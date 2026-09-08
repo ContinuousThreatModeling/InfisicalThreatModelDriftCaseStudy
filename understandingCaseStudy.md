@@ -1,4 +1,4 @@
-# Reading the output
+# Understanding the case study
 
 What one lifecycle run produced, and how to read it. Start at [README.md](README.md) for why the lifecycle exists; this file is about the artifacts on disk.
 
