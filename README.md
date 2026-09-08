@@ -50,7 +50,7 @@ Left is the seed (refresh JWT + access JWT, MongoDB, agent). Right is the change
 3. Change-event DFD: [serviceTokenDfd-v0.47.0-postgres.md](serviceTokenDfd-v0.47.0-postgres.md).
 4. Lifecycle output: [serviceTokenThreatModelDrift-v0.42.0-to-v0.47.0-postgres.md](serviceTokenThreatModelDrift-v0.42.0-to-v0.47.0-postgres.md) and [securityAssumptions-v0.47.0-postgres.md](securityAssumptions-v0.47.0-postgres.md).
 
-**[readingTheDriftReport.md](readingTheDriftReport.md)** explains what those outputs are, which files are inputs versus results, and how to read the drift report section by section. Read it before the report itself.
+**[understandingCaseStudy.md](understandingCaseStudy.md)** explains what those outputs are, which files are inputs versus results, and how to read the drift report section by section. Read it before the report itself.
 
 
 
