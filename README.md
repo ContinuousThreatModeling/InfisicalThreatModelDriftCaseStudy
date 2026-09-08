@@ -19,7 +19,7 @@ Between those pins the credential is not the same object. The seed is a JWT acce
 
 ## Lifecycle
 
-Continuous threat modelling
+![Continuous threat modelling](threat-model-drift-v4.jpg)
 
 Editable source: [threat-model-drift-v4.drawio](threat-model-drift-v4.drawio).
 
@@ -37,7 +37,7 @@ A change event triggers analysis. **Discover** derives the current architecture.
 
 ## Architecture drift (this change event)
 
-Service token architecture drift
+![Service token architecture drift](serviceTokenDfd-consolidated-v0.42.0-v0.47.0-postgres.jpg)
 
 Editable source: [serviceTokenDfd-consolidated-v0.42.0-v0.47.0-postgres.drawio](serviceTokenDfd-consolidated-v0.42.0-v0.47.0-postgres.drawio).
 
